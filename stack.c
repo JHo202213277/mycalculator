@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "stack.h"
 #include <string.h>
+//202213277 신재호
 
 Stack * create_stack(int initial_size)
 {
@@ -40,7 +41,7 @@ Item pop(Stack * stack)
 	if (is_empty(stack))
 		stack_underflow();
 	else {
-		printf("--Poped: %d\n", stack->contents[stack->top-1]);
+		printf("--Poped: %d - 202213277\n", stack->contents[stack->top-1]);
 		return stack->contents[--stack->top];
 	}
 	return '\0'; /* prevents compiler warning due to stack_underflow() call */
@@ -57,14 +58,17 @@ Item peek(Stack *stack)
 void stack_overflow(void)
 {
 	printf("Expression is too complex\n");
+	printf("overflow error-202213277");
 	exit(EXIT_FAILURE);
 }
 
 void stack_underflow(void)
 {
 	printf("Not enough operands in expression\n");
+	printf("underflow error-202213277");
 	exit(EXIT_FAILURE);
 }
+
 
 static void reallocate(Stack * stack)
 {
