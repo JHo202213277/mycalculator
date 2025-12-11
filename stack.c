@@ -41,7 +41,7 @@ Item pop(Stack * stack)
 	if (is_empty(stack))
 		stack_underflow();
 	else {
-		printf("--Poped: %d - 202213277\n", stack->contents[stack->top-1]);
+		printf("--Poped: %d : 202213277신재호\n", stack->contents[stack->top-1]);
 		return stack->contents[--stack->top];
 	}
 	return '\0'; /* prevents compiler warning due to stack_underflow() call */
